@@ -17,8 +17,9 @@ do
     OCCURENCE=$(echo "$CONTENT"|grep -o "$word"|wc -l)
     echo "Wordname:$word,occurence of word:$OCCURENCE" > outputfile
 done
-#sort -k2r outputfile
-rm -rf outputfile
+FRE=$(sort -k2r outputfile)
+echo $FRE
+
 
 
   
