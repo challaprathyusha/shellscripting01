@@ -16,5 +16,5 @@ do
     echo "Wordname:$word,occurence of word:$OCCURENCE" > output.txt
 done
 
-    TOP5=$(sort -k2r output.txt|head -5)
+    TOP5=$(sort -k2r output.txt)
     echo "$TOP5"
