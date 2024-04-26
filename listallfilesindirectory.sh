@@ -9,7 +9,7 @@ else
     exit 1
 fi
 
-FILES="/tmp/files/*"
+FILES="$SOURCEDIR/*"
 while read -r line 
 do
 echo $line
