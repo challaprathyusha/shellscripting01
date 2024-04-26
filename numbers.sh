@@ -3,4 +3,10 @@ NUM1=$1
 NUM2=$2
 
 ADD=$(($NUM1+$NUM2))
-echo "addition : $ADD"
+SUB=$(($NUM1-$NUM2))
+MUL=$(($NUM1*$NUM2))
+DIV=$(($NUM1%$NUM2))
+echo "SUBTRACTION : $SUB"
+echo "ADDITION : $ADD"
+echo "MULTIPLICATION : $MUL"
+echo "DIVISION : $DIV"
