@@ -8,9 +8,5 @@ else
     echo "Please makesure $SOURCEDIR directory exists"
     exit 1
 fi
-
-FILES="$SOURCEDIR/*"
-while read -r line 
-do
-echo $line
-done << $FILES
+cd $SOURCEDIR
+ls -l
