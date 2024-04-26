@@ -8,11 +8,11 @@ else
     exit 1
 fi
 
-FILE=$(cat $SOURCEFILE)
-UNIQWORDS=$(echo $FILE|sort -u)
+cat $SOURCEFILE
+UNIQWORDS=$(cat $SOURCEFILE|sort |uniq)
 for word in $UNIQWORDS
 do
-    OCCURENCE=$(echo $FILE|grep -o 'word'|wc -l)
+    OCCURENCE=$(cat $SOURCEFILE|grep -o 'word'|wc -l)
     echo "Wordname:$word,occurence of word:$OCCURENCE" >> output.txt
 done
 
