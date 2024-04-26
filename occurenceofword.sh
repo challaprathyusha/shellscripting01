@@ -17,5 +17,5 @@ do
     echo "Wordname:$word,occurence of word:$OCCURENCE" >>output.txt
 done
 
-  sort -k2r output.txt
+  sort  -n output.txt
   
