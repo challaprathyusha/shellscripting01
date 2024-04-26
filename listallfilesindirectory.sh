@@ -9,9 +9,9 @@ else
     exit 1
 fi
 cd $SOURCEDIR
-LIST=$ls 
+ls 
 
-for i in $LIST
+for i in ls
 do
     echo $i
 done
