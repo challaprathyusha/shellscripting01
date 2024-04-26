@@ -10,8 +10,7 @@ else
 fi
 
 FILES="/tmp/files/*"
-for i in $FILES
+while read -r line 
 do
-echo $i
-
-done
+echo $line
+done << $FILES
