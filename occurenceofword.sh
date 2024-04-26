@@ -8,13 +8,13 @@ else
     exit 1
 fi
 
-FILE="$(cat $SOURCEFILE)"
-UNIQWORDS=$(echo $FILE|sort -u)"
+FILE=$(cat $SOURCEFILE)
+UNIQWORDS=$(echo $FILE|sort -u)
 for word in $UNIQWORDS
 do
     OCCURENCE="$(echo $FILE|grep -o 'word'|wc -l)"
-    echo "Wordname:$word,occurence of word:$OCCURENCE" > output.txt
+    echo "Wordname:$word,occurence of word:$OCCURENCE" >> output.txt
 done
 
-TOPMOSTFREQWORDS="$(sort -k2r output.txt)"
+TOPMOSTFREQWORDS=$(sort -k2r output.txt)
 echo "$TOPMOSTFREQWORDS"
