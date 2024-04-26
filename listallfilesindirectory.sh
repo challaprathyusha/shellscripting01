@@ -1,5 +1,5 @@
 #!/bin/bash
-SOURCEDIR="/tmp/files"
+SOURCEDIR=$1
 #check if directory exists or not
 if [ -d $SOURCEDIR ]
 then
