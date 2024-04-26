@@ -12,7 +12,7 @@ fi
 cd $SOURCEDIR
 LIST=$(ls) 
 
-for i in $LIST
+for file in $LIST
 do
-    echo $i
+    echo $file
 done
