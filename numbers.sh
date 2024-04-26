@@ -1,7 +1,7 @@
 #!/bin/bash
 # Check if two arguments are provided
 if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <number1> <number2>"
+    echo "Usage: $0 $1 $2"
     exit 1
 fi
 
