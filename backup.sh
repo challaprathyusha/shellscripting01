@@ -1,10 +1,10 @@
 #!/bin/bash
-INPUTFILE=file
+INPUTFILE="file"
 TIMESTAMP=$(date +%F-%H-%M-%S)
-BACKUPFILE=$INPUTFILE-$TIMESTAMP
-OUTPUTFILE=/home/ec2-user/shellscripting01/$BACKUPFILE
+BACKUPFILE="$INPUTFILE-$TIMESTAMP"
+OUTPUTFILE="/home/ec2-user/shellscripting01/$BACKUPFILE"
 
-if [ -f $INPUTFILE ]
+if [ -f "$INPUTFILE" ]
 then
     echo "create a backupfile with name $BACKUPFILE"
 else
@@ -12,4 +12,5 @@ else
     exit 1
 fi
 
-cat $INPUTFILE > $OUTPUTFILE
+cat "$INPUTFILE" > "$BACKUPFILE"
+
