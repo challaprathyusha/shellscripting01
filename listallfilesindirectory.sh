@@ -9,4 +9,4 @@ else
     exit 1
 fi
 cd $SOURCEDIR
-ls -l
+ls 
