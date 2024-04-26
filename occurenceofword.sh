@@ -13,7 +13,7 @@ UNIQWORDS=$(cat $SOURCEFILE|tr " " "\n"|sort |uniq)
 for word in $UNIQWORDS
 do
     OCCURENCE=$(cat $SOURCEFILE|grep -o '$word'|wc -l)
-    echo "Wordname:$word,occurence of word:$OCCURENCE" >> output.txt
+    echo "Wordname:$word,occurence of word:$OCCURENCE" > output.txt
 done
 
 TOPMOSTFREQWORDS=$(sort -k2r output.txt)
