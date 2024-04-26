@@ -10,3 +10,4 @@ else
 fi
 
 FILES="/tmp/files/*"
+echo $FILES
