@@ -12,7 +12,7 @@ FILE=$(cat $SOURCEFILE)
 UNIQWORDS=$(echo $FILE|sort -u)
 for word in $UNIQWORDS
 do
-    OCCURENCE="$(echo $FILE|grep -o 'word'|wc -l)"
+    OCCURENCE=$(echo $FILE|grep -o 'word'|wc -l)
     echo "Wordname:$word,occurence of word:$OCCURENCE" >> output.txt
 done
 
