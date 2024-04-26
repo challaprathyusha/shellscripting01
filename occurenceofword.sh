@@ -1,5 +1,6 @@
 #!/bin/bash
 SOURCEFILE="$1"
+
 if [ -f $SOURCEFILE ]
 then
     echo "text file is given as input to the script"
@@ -14,8 +15,10 @@ UNIQWORDS=$(echo "$CONTENT"|tr " " "\n"|sort |uniq)
 for word in $UNIQWORDS
 do
     OCCURENCE=$(echo "$CONTENT"|grep -o "$word"|wc -l)
-    echo "Wordname:$word,occurence of word:$OCCURENCE" 
+    echo "Wordname:$word,occurence of word:$OCCURENCE" 1>> output
 done
+sort -k2r output
 
- 
+cat output|head -5
+rm -rf output
   
