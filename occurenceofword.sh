@@ -19,6 +19,6 @@ do
 done
 sort -k2r outputfile
 
-cat output|head -5
-rm -rf output
+cat outputfile|head -3
+rm -rf outputfile
   
