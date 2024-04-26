@@ -32,7 +32,6 @@ validate $? "unique words extraction from file is"
 for word in $UNIQWORDS
 do
     OCCURENCE=$(echo "$CONTENT"|grep -o "$word"|wc -l)
-    validate $? "occurence of each word from file is"
     echo "Wordname:$word,occurence of word:$OCCURENCE" 
 done
 
