@@ -1,0 +1,4 @@
+#!/bin/bash
+INPUTFILE=$1
+TIMESTAMP=$($date +%F-%H-%M-%S)
+OUTPUTFILE=$1-$TIMESTAMP
