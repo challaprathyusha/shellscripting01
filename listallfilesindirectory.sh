@@ -13,4 +13,4 @@ FILES="/tmp/files/*"
 while read -r line 
 do
 echo $line
-done << $FILES
+done << '$FILES'
