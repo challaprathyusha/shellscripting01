@@ -1,5 +1,6 @@
 #!/bin/bash
 SOURCEDIR=$1
+
 #check if directory exists or not
 if [ -d $SOURCEDIR ]
 then
