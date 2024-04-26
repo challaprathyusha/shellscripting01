@@ -13,4 +13,4 @@ FILES="$SOURCEDIR/*"
 while read -r line 
 do
 echo $line
-done << '$FILES'
+done << $FILES
