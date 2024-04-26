@@ -11,7 +11,7 @@ fi
 
 CONTENT=$(cat $SOURCEFILE)
 echo "$CONTENT"
-UNIQWORDS=$(echo "$CONTENT"|tr " " "\n"|sort |uniq)
+UNIQWORDS=$(echo "$CONTENT"|tr " " "\n"| tr '[:upper:]' '[:lower:]'|sort |uniq)
 for word in $UNIQWORDS
 do
     OCCURENCE=$(echo "$CONTENT"|grep -o "$word"|wc -l)
