@@ -9,7 +9,7 @@ else
     exit 1
 fi
 cd $SOURCEDIR
-LIST="ls" 
+LIST=$ls 
 
 for i in $LIST
 do
