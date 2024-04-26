@@ -15,10 +15,10 @@ UNIQWORDS=$(echo "$CONTENT"|tr " " "\n"| tr '[:upper:]' '[:lower:]'|sort |uniq)
 for word in $UNIQWORDS
 do
     OCCURENCE=$(echo "$CONTENT"|grep -o "$word"|wc -l)
-    echo "Wordname:$word,occurence of word:$OCCURENCE" >> outputfile
+    echo "Wordname:$word,occurence of word:$OCCURENCE" > outputfile
 done
 #sort -k2r outputfile
-#rm -rf outputfile
+rm -rf outputfile
 
 
   
