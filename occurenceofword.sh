@@ -18,7 +18,7 @@ do
     echo "Wordname:$word,occurence of word:$OCCURENCE" >> outputfile
 done
 #sort -k2r outputfile
-rm -rf outputfile
-cat outputfile|head -3
+#rm -rf outputfile
+
 
   
