@@ -9,7 +9,7 @@ else
 fi
 
 cat $SOURCEFILE
-UNIQWORDS=$(cat $SOURCEFILE|sort |uniq)
+UNIQWORDS=$(cat $SOURCEFILE|tr " " "\n"|sort |uniq)
 for word in $UNIQWORDS
 do
     OCCURENCE=$(cat $SOURCEFILE|grep -o 'word'|wc -l)
