@@ -10,4 +10,8 @@ else
 fi
 
 FILES="/tmp/files/*"
-echo $FILES
+for i in $FILES
+do
+echo $i
+
+done
