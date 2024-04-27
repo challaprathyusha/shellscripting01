@@ -22,10 +22,10 @@ MOUNTPOINT=$(echo $line|awk -F " " '{print$NF}')
 
 if [ $USAGE -ge $DISKTHRESHOLD ]
 then
-    MESSAGE+="$MOUNTPOINT is more than $DISKTHRESHOLD, and the usage is $USAGE\n"
+    MESSAGE+="$MOUNTPOINT is more than $DISKTHRESHOLD, and the usage is $USAGE"
 fi
 done <<< $DISKUSAGE
 
-echo -e "message:\n$MESSAGE"
+echo -e "message:$MESSAGE"
 date=$(date "+%F-%H-%M-%S")
-echo "usage is:\n$MESSAGE"|mail -s "Date $date" cprathyusha94@gmail.com
+echo "usage is:$MESSAGE"|mail -s "Date $date" cprathyusha94@gmail.com
