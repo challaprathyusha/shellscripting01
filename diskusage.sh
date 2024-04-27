@@ -26,4 +26,4 @@ then
 fi
 done <<< $DISKUSAGE
 
-echo "message:$MESSAGE"
+echo -e "message:$MESSAGE"
