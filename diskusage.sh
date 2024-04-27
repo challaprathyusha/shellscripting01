@@ -25,3 +25,5 @@ then
     MESSAGE="$MOUNTPOINT is more than $DISKTHRESHOLD, and the usage is $USAGE"
 fi
 done <<< $DISKUSAGE
+
+echo "message:$MESSAGE"
