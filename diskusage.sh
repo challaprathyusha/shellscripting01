@@ -17,8 +17,8 @@ fi
 
 while read -r line
 do
-USAGE=$($DISKUSAGE|awk -F " " '{print$6F}'|cut -d "%" -f1)
-MOUNTPOINT=$($DISKUSAGE|awk -F " " '{print$NF}')
+USAGE=$(echo $line|awk -F " " '{print$6F}'|cut -d "%" -f1)
+MOUNTPOINT=$(echo $line|awk -F " " '{print$NF}')
 
 if [ $USAGE -ge $DISKTHRESHOLD ]
 then
