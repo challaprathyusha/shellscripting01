@@ -23,3 +23,4 @@ fi
 validate $SOURCEDIR
 validate $DESTINDIR
 
+tar czvf $SOURCEDIR.tar.gz  $SOURCEDIR
