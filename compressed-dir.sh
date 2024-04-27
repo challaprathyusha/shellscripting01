@@ -11,7 +11,7 @@ N="\e[0m"
 
 if [ -d $SOURCEDIR ]
 then 
-    echo -e "$G the directory $SOURCEDIR exist $N"
+    echo -e "$Y the directory $SOURCEDIR exist $N"
 else
     echo -e "$R Please make sure $SOURCEDIR exist $N"
     exit 1
@@ -19,7 +19,7 @@ fi
 
 if [ -d $DESTINDIR ]
 then 
-    echo -e "$G the directory $DESTINDIR exist $N"
+    echo -e "$Y the directory $DESTINDIR exist $N"
 else
     echo -e "$R Please make sure $DESTINDIR exist $N"
     exit 1
