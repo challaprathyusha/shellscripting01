@@ -34,7 +34,7 @@ exitstatus(){
 TIMESTAMP="$(date +%F-%H-%M-%S)"
 Backup="$(tar czvf $SOURCEDIR.tar.gz $SOURCEDIR)"
 exitstatus $? "backupfile is"
-FINALFILE="$DESTINATIONDIR/$TIMESTAMP_$Backup"
+FINALFILE="$DESTINATIONDIR/$Backup-$TIMESTAMP"
 exitstatus $? "finalfile is"
 
 echo "compressed backupfile is : $FINALFILE"
