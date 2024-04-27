@@ -23,4 +23,8 @@ fi
 validate $SOURCEDIR
 validate $DESTINDIR
 
-tar czvf $SOURCEDIR.tar.gz  $SOURCEDIR
+
+ARCHIVENAME="$DESTINDIR/$SOURCEDIR-$TIMESTAMP.tar.gz"
+tar czvf $ARCHIVENAME  $SOURCEDIR
+
+echo "Backup completed: $ARCHIVENAME"
