@@ -14,7 +14,7 @@ else
     echo -e "$2....$G success $N"
 fi
 }
-
+MESSAGE=""
 while read -r line
 do
 USAGE=$(echo $line|awk -F " " '{print$6F}'|cut -d "%" -f1)
@@ -22,8 +22,10 @@ MOUNTPOINT=$(echo $line|awk -F " " '{print$NF}')
 
 if [ $USAGE -ge $DISKTHRESHOLD ]
 then
-    MESSAGE+="$MOUNTPOINT is more than $DISKTHRESHOLD, and the usage is $USAGE"
+    MESSAGE+="$MOUNTPOINT is more than $DISKTHRESHOLD, and the usage is $USAGE\n"
 fi
 done <<< $DISKUSAGE
 
-echo -e "message:$MESSAGE"
+echo -e "message:\n$MESSAGE"
+date=$(date "+%F-%H-%M-%S")
+echo "usage is:\n$MESSAGE"|mail -s "Date $date" cprathyusha94@gmail.com
