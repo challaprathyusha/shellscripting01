@@ -22,7 +22,6 @@ MOUNTPOINT=$(echo $line|awk -F " " '{print$NF}')
 
 if [ $USAGE -ge $DISKTHRESHOLD ]
 then
-    MESSAGE=echo "$MOUNTPOINT is more than $DISKTHRESHOLD, and the usage is $USAGE"
-    echo $MESSAGE
+    MESSAGE="$MOUNTPOINT is more than $DISKTHRESHOLD, and the usage is $USAGE"
 fi
 done <<< $DISKUSAGE
