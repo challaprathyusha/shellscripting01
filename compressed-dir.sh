@@ -21,5 +21,5 @@ fi
 }
 
 validate $SOURCEDIR
-validate $ESTINDIR
+validate $DESTINDIR
 
