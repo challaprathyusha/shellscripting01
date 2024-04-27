@@ -36,6 +36,6 @@ FILE="$DESTINATIONDIR/$SOURCEFILE-$TIMESTAMP.tar.gz"
 exitstatus $? "file is"
 
 tar czvf $FILE $SOURCEDIR
-exitstatus $? "backupfile is"
+exitstatus $? "COMPRESSEDARCHIVED file is"
 
 echo "compressed backupfile is : $FILE"
