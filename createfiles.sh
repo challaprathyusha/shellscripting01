@@ -1,5 +1,6 @@
 #!/bin/bash
-DIRNAME=$1
+DIRNAME=$1 #/c/devops/repos/dir1
+
 NOOFFILES=$2
 
 if [ $# -eq 2 ]
@@ -10,14 +11,22 @@ else
     exit 1
 fi
 
-cd ..
-mkdir $DIRNAME
-if [ $? -eq 0 ]
+validate(){
+    if [ $? -eq 0 ]
+    then
+        echo "directory is created"
+    else
+        echo "directory is not created"
+        exit 1
+    fi
+}
+
+if [ -d "$DIRNAME" ]
 then
-    echo "directory is created"
+    echo "$DIRNAME exists"
 else
-    echo "directory is not created"
-    exit 1
+    mkdir $DIRNAME
+    validate 
 fi
 
 cd $DIRNAME
@@ -26,3 +35,4 @@ for ((i=1;i<=$NOOFFILES;i++))
 do
     touch FILE$i
 done
+ls -l
