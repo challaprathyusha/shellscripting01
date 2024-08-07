@@ -12,13 +12,13 @@ else
 fi
 
 validate(){
-    if [ $? -eq 0 ]
-    then
-        echo "directory is created"
-    else
-        echo "directory is not created"
-        exit 1
-    fi
+if [ $3 -ne 0 ]
+then
+    echo "$4 is not created"
+    exit 1
+else
+    echo "$4 is created"
+fi
 }
 
 if [ -d "$DIRNAME" ]
@@ -26,7 +26,7 @@ then
     echo "$DIRNAME exists"
 else
     mkdir $DIRNAME
-    validate 
+    validate $? "directory"
 fi
 
 cd $DIRNAME
@@ -34,5 +34,6 @@ cd $DIRNAME
 for ((i=1;i<=$NOOFFILES;i++))
 do
     touch FILE$i
+    validate $? "file"
 done
 ls -l
